@@ -1,0 +1,71 @@
+﻿//sass style
+@import "../../common/app-common-2";
+$baseFontSize: 100px !default;
+
+@function pxToRem($px) {
+    @return $px / $baseFontSize * 1rem;
+}
+
+$back : #333;
+$gray : #666;
+$orange : #ff5a00;
+
+body {
+	background-color: #fff;
+	font-size: pxToRem(12px);
+}
+.m-page {
+	margin: 0 auto;
+	position: relative;
+	padding: pxToRem(30px) pxToRem(20px);
+	width: 100%;
+	min-height: 100%;
+	max-width: 640px;
+	color: $gray;
+}
+
+header {
+	text-align: center;
+	h1 {
+		font-size: pxToRem(25px);
+		color: $back;
+	}
+	.sub-title {
+		margin: pxToRem(6px) auto;
+		width: pxToRem(170px);
+		line-height: pxToRem(16px);
+	}
+}
+
+article {
+	margin-top: pxToRem(35px);
+
+	h2 {
+		margin-bottom: pxToRem(15px);
+		font-size: pxToRem(14px);
+		color: $back;
+
+		em {
+			margin-bottom: pxToRem(2px);
+			margin-right: pxToRem(8px);
+			display: inline-block;
+			height: pxToRem(14px);
+			width: pxToRem(2px);
+			background-color: $orange;
+			vertical-align: middle;
+		}
+	}
+	.txt {
+		line-height: pxToRem(16px);
+		&.large {
+			font-size: pxToRem(14px);
+		}
+	}
+	.img {
+		padding: pxToRem(22px) 0;
+	}
+}
+
+.text-orange {
+	color: $orange;
+}

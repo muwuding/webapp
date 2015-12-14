@@ -1,0 +1,723 @@
+﻿//sass style
+@import "../../../common/app-common-1";
+$baseFontSize: 100px !default;
+
+// pixels to rems
+@function pxToRem($px) {
+    @return $px / $baseFontSize * 1rem;
+}
+
+body {
+	color: #ffe175;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+.hide {
+	display: none;
+}
+a {
+	color: #333;
+	&:active {
+		color: #999;
+	}
+}
+img {
+	display: block;
+}
+
+.page {
+	box-sizing: content-box;
+}
+
+.page-bg-1 {
+	background: url(../images/bg-1.png) #f65d4e no-repeat;
+	background-size: 100% auto;
+}
+
+.page-bg-2 {
+	background: url(../images/bg-2.png) #f65d4e no-repeat;
+	background-size: 100% auto;
+}
+
+.page-bg-3 {
+	background: #ffe175;
+	background-size: 100% auto;
+}
+
+// 头部
+header {
+	width: 100%;
+	&.header-bg-1 {
+		background: url(../images/head-bg-1.png) no-repeat;
+		height: pxToRem(257px);
+		background-size: 100% auto;
+	}
+	&.header-bg-2 {
+		background: url(../images/head-bg-2.png) no-repeat;
+		height: pxToRem(319px);
+		background-size: 100% auto;
+	}
+	&.header-bg-3 {
+		background: url(../images/bg-1.png) #f65d4e no-repeat;
+		background-size: 100% auto;
+	}
+}
+
+// 通用头部信息
+.hd-info {
+	position: relative;
+	height: pxToRem(257px);
+	z-index: 1;
+	.info-item {
+		position: absolute;
+		top: pxToRem(110px);
+		width: pxToRem(130px);
+		text-align: center;
+		z-index: 2;
+		&.left {
+			left: 0;
+		}
+		&.right {
+			right: 0;
+		}
+		.image {
+			margin: 0 auto;
+			width: pxToRem(74px);
+			height: pxToRem(74px);
+			background: #fff3d2;
+			border-radius: 50%;
+			img {
+				border-radius: 50%;
+				width: pxToRem(74px);
+				height: pxToRem(74px);
+			}
+			.big-text {
+				height: pxToRem(37px);
+				line-height: pxToRem(24px);
+				font-size: pxToRem(19px);
+				color: #37343b;
+				padding-top: pxToRem(13px);
+			}
+			.small-text {
+				height: pxToRem(24px);
+				line-height: pxToRem(24px);
+				font-size: pxToRem(19px);
+				color: #37343b;
+			}
+		}
+		.user-name {
+			margin-top: pxToRem(5px);
+			font-size: pxToRem(12px);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: #ffe7b9;
+			.strong {
+				color: #f65d4e;
+			}
+		}
+		.ptf-name {
+			height: pxToRem(30px);
+			line-height: pxToRem(30px);
+			font-size: pxToRem(13px);
+			color: #ffe7b9;
+		}
+		.total-yield {
+			margin-top: pxToRem(5px);
+			font-size: pxToRem(16px);
+			color: #f65d4e;
+		}
+	}
+}
+
+// 有参与活动且活动结束头部信息
+.header-bg-3 {
+
+	.header-title-3 {
+		padding: pxToRem(25px) pxToRem(15px) pxToRem(10px);
+		text-align: center;
+		font-size: pxToRem(24px);
+		color: #ffe175;
+	}
+
+	.hd-info-2 {
+		position: relative;
+		height: pxToRem(105px);
+		z-index: 1;
+		.icon-vs {
+			position: absolute;
+			top: pxToRem(16px);
+			left: pxToRem(128px);
+			width: pxToRem(65px);
+			height: pxToRem(42px);
+			background: url(../images/icon-vs.png) no-repeat;
+			background-size: pxToRem(65px) pxToRem(42px);
+			z-index: 3;
+		}
+		.info-item {
+			position: absolute;
+			top: 0;
+			width: pxToRem(125px);
+			text-align: center;
+			z-index: 2;
+			&.left {
+				left: pxToRem(20px);
+			}
+			&.right {
+				right: pxToRem(20px);
+			}
+			.image {
+				margin: 0 auto;
+				width: pxToRem(74px);
+				height: pxToRem(74px);
+				background: #fff3d2;
+				border-radius: 50%;
+				img {
+					border-radius: 50%;
+					width: pxToRem(74px);
+					height: pxToRem(74px);
+				}
+				.big-text {
+					height: pxToRem(37px);
+					line-height: pxToRem(24px);
+					font-size: pxToRem(19px);
+					color: #37343b;
+					padding-top: pxToRem(13px);
+				}
+				.small-text {
+					height: pxToRem(24px);
+					line-height: pxToRem(24px);
+					font-size: pxToRem(19px);
+					color: #37343b;
+				}
+			}
+			.user-name {
+				margin-top: pxToRem(5px);
+				font-size: pxToRem(12px);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: #ffe7b9;
+				.strong {
+					color: #f65d4e;
+				}
+			}
+			.ptf-name {
+				height: pxToRem(30px);
+				line-height: pxToRem(30px);
+				font-size: pxToRem(13px);
+				color: #ffe7b9;
+			}
+			.total-yield {
+				margin-top: pxToRem(5px);
+				font-size: pxToRem(16px);
+				color: #f65d4e;
+			}
+		}
+	}
+
+	// 战绩
+	.compare-result-wrap {
+		.result-text {
+			padding: 0 pxToRem(30px);
+			color: #ffe7b9;
+			text-align: center;
+			font-size: pxToRem(15px);
+		}
+	}
+
+	// 奖励物品
+	.award-text-wrap {
+		margin-top: pxToRem(15px);
+		padding-bottom: pxToRem(15px);
+		.award-text {
+			position: relative;
+			margin: 0 pxToRem(30px) 0 pxToRem(50px);
+			padding-left: pxToRem(90px);
+			color: #ffe175;
+			font-size: pxToRem(18px);
+			min-height: pxToRem(25px);
+			line-height: pxToRem(25px);
+			.label {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: pxToRem(25px);
+				line-height: pxToRem(25px);
+			}
+		}
+	}
+
+}
+
+// 无参与活动且活动结束
+.page-over-wrap {
+	position: relative;
+	padding-top: pxToRem(60px);
+	height: pxToRem(460px);
+	background: url(../images/activity-over-bg.png) 0 pxToRem(60px) no-repeat;
+	background-size: 100% pxToRem(400px);
+	.page-over-title {
+		padding: pxToRem(135px) pxToRem(15px) pxToRem(10px);
+		text-align: center;
+		font-size: pxToRem(24px);
+		color: #ffe175;
+	}
+	.page-over-tip-text {
+		text-align: center;
+	  height: 0.35rem;
+	  line-height: 0.35rem;
+	  font-size: pxToRem(15px);
+	}
+}
+
+// 提交组合按钮
+.commit-ptf-btn-wrap {
+	margin-top: pxToRem(10px);
+	.commit-ptf-btn {
+		margin: 0 auto;
+		display: block;
+		width: pxToRem(176px);
+		height: pxToRem(52px);
+		background: url(../images/commit-ptf-btn-bg.png) no-repeat;
+		background-size: 100% 100%;
+		text-indent: -9999em;
+	}
+	.runing-text {
+		font-size: pxToRem(35px);
+		height: pxToRem(52px);
+		line-height: pxToRem(52px);
+		color: #ffe175;
+		text-align: center;
+	}
+}
+
+// 开卡按钮
+.open-card-btn-wrap {
+	margin-top: pxToRem(10px);
+	position: relative;
+	background: url(../images/gift-bg.png) no-repeat;
+	height: pxToRem(210px);
+	background-size: 100% pxToRem(200px);
+	z-index: 1;
+	.open-card-btn {
+		position: absolute;
+		left: pxToRem(90px);
+		top: pxToRem(13px);
+		width: pxToRem(140px);
+		height: pxToRem(194px);
+		background: url(../images/exchange-btn-bg.png) no-repeat;
+		background-size: 100% 100%;
+		text-indent: -9999em;
+		z-index: 2;
+		&.opening {
+			animation: opening 0.2s ease-in-out 0s infinite normal;
+			-moz-animation: opening 0.2s ease-in-out 0s infinite normal;
+			-webkit-animation: opening 0.2s ease-in-out 0s infinite normal;
+			-o-animation: opening 0.2s ease-in-out 0s infinite normal;
+		}
+	}
+}
+
+// 卡牌数量
+.gift-list-wrap {
+	margin-top: pxToRem(10px);
+	.gift-item {
+		position: relative;
+		margin: 0 pxToRem(50px) 0 pxToRem(72px);
+		padding-left: pxToRem(52px);
+		color: #ffe175;
+		font-size: pxToRem(18px);
+		min-height: pxToRem(25px);
+		line-height: pxToRem(25px);
+		.label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: pxToRem(25px);
+			line-height: pxToRem(25px);
+		}
+	}
+}
+
+// 兑换区链接
+.exchange-gift-btn-wrap {
+	margin-top: pxToRem(10px);
+	.exchange-gift-btn {
+		margin: 0 auto;
+		display: block;
+		width: pxToRem(176px);
+		height: pxToRem(52px);
+		background: url(../images/exchange-gift-btn-bg.png) no-repeat;
+		background-size: 100% 100%;
+		text-indent: -9999em;
+	}
+	.time-txt {
+		text-align: center;
+		line-height: pxToRem(44px);
+		color: #ffe175;
+		font-size: pxToRem(15px);
+	}
+}
+
+// 关于领奖
+.exchange-rule-wrap {
+	background: #ffe175;
+	padding: pxToRem(20px) pxToRem(25px) 0;
+	.rule-title {
+		text-align: center;
+		color: #f65d4e;
+		font-size: pxToRem(18px);
+		padding-bottom: pxToRem(10px);
+	}
+	.rule-text {
+		color: #f65d4e;
+		font-size: pxToRem(15px);
+		padding-bottom: pxToRem(20px);
+	}
+}
+
+// 底部
+footer {
+	margin-top: pxToRem(12px);
+}
+
+.footer-top-bg {
+	position: relative;
+	top: 1px;
+	display: block;
+	height: pxToRem(27px);
+	background: url(../images/footer-bg.png) no-repeat;
+	background-size: 100% auto;
+}
+
+// 底部信息
+.footer-text-wrap {
+	background: #d64c45;
+	.big-text {
+		text-align: center;
+		height: pxToRem(35px);
+		line-height: pxToRem(35px);
+	}
+	.runing-footer-text {
+		padding: pxToRem(10px) pxToRem(12px);
+		color: #ffe175;
+		font-size: pxToRem(15px);
+
+		.common-tip-text {
+			margin-bottom: pxToRem(10px);
+		}
+		.more-link-wrap {
+			margin-top: pxToRem(15px);
+			text-align: right;
+			a {
+				color: #ffe175;
+			}
+		}
+	}
+}
+
+/* 弹窗样式 */
+// 自动消失弹窗
+.dialog-tips {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/popup_overlay.png) repeat;
+	z-index: 9999;
+	.dialog-tips-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: pxToRem(-130px);
+		margin-top: pxToRem(-20px);
+		border-radius: pxToRem(4px);
+		padding: pxToRem(20px) pxToRem(10px);
+		width: pxToRem(260px);
+		min-height: pxToRem(16px);
+		line-height: pxToRem(16px);
+		text-align: center;
+		background: #ffe175;
+		color: #c48723;
+		font-size: pxToRem(14px);
+	}
+}
+
+// 自定义弹窗
+.common-dialog-wrap {
+	padding: pxToRem(20px);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: pxToRem(-130px);
+	margin-top: pxToRem(-20px);
+	border-radius: pxToRem(5px);
+	width: pxToRem(260px);
+	min-height: pxToRem(40px);
+	background: #ffe175;
+	color: #c48723;
+
+	.close-dialog-btn-wrap {
+		margin-top: pxToRem(10px);
+		.close-dialog-btn {
+			margin: 0 auto;
+			display: block;
+			width: pxToRem(180px);
+			height: pxToRem(50px);
+			line-height: pxToRem(50px);
+			background: #f65d4e;
+			text-align: center;
+			color: #fff;
+			border-radius: pxToRem(5px);
+			font-size: pxToRem(20px);
+		}
+	}
+
+}
+
+// 没有组合弹窗
+.no-ptf-list-dialog {
+	.tip-text {
+		font-size: pxToRem(15px);
+	}
+}
+
+// 未提交组合弹窗
+.no-commit-ptf-dialog {
+	.tip-text {
+		height: pxToRem(84px);
+		font-size: pxToRem(15px);
+	}
+}
+
+// 提交组合弹窗
+.commit-ptf-dialog {
+	.ptf-lists {
+		min-height: pxToRem(80px);
+		max-height: pxToRem(160px);
+		overflow-x: hidden;
+		overflow-y: auto;
+		.ptf-name {
+			display: block;
+			width: pxToRem(220px);
+			height: pxToRem(30px);
+			line-height: pxToRem(30px);
+			text-align: center;
+			font-size: pxToRem(18px);
+			color: #c48723;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			&.active {
+				background: #ffe7b9;
+				color: #c48723;
+			}
+		}
+	}
+}
+
+// 奖励红包弹窗
+.award-cash-dialog {
+	.cash-image {
+		margin: 0 auto;
+		width: pxToRem(112px);
+		img {
+			width: pxToRem(112px);
+			height: pxToRem(79px);
+		}
+	}
+	.tip-title-wrap {
+		padding: pxToRem(10px) 0;
+		.tips-title {
+			color: #f65d4e;
+			text-align: center;
+			font-size: pxToRem(22px);
+		}
+	}
+}
+
+// 奖励金币弹窗
+.award-golden-dialog {
+	.cash-image {
+		margin: 0 auto;
+		width: pxToRem(120px);
+		img {
+			width: pxToRem(120px);
+			height: pxToRem(62px);
+		}
+	}
+	.tip-title-wrap {
+		padding: pxToRem(10px) 0;
+		.tips-title {
+			color: #f65d4e;
+			text-align: center;
+			font-size: pxToRem(22px);
+		}
+		.sub-title {
+			padding: 0 pxToRem(20px);
+			color: #c48723;
+			text-align: center;
+			font-size: pxToRem(18px);
+		}
+	}
+}
+
+// 卡牌用光弹窗
+.no-card-leave-dialog {
+	.tip-title-wrap {
+		padding: pxToRem(10px) 0 pxToRem(30px);
+		.tips-title {
+			color: #f65d4e;
+			text-align: center;
+			font-size: pxToRem(22px);
+		}
+	}
+}
+
+.share-page {
+	padding-bottom: pxToRem(100px);
+}
+
+.share-page-over {
+	padding-bottom: pxToRem(75px);
+}
+
+.share-text-warp {
+	padding: pxToRem(25px);
+	.share-text {
+		text-align: center;
+		color: #ffe7b9;
+		font-size: pxToRem(15px);
+		&.pdt10 {
+			padding: 0 pxToRem(10px);
+		}
+	}
+}
+
+.share-award-wrap {
+	.award-text {
+		position: relative;
+		margin: 0 pxToRem(30px) 0 pxToRem(50px);
+		padding-left: pxToRem(90px);
+		color: #ffe175;
+		font-size: pxToRem(18px);
+		min-height: pxToRem(25px);
+		line-height: pxToRem(25px);
+		.label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: pxToRem(25px);
+			line-height: pxToRem(25px);
+		}
+	}
+}
+
+// 分享开卡弹窗
+.share-no-ptf-list-dialog {
+	.tip-text {
+		font-size: pxToRem(15px);
+	}
+	.sub-text {
+		padding: pxToRem(10px) 0;
+		font-size: pxToRem(15px);
+		text-align: center;
+	}
+}
+
+// 分享banner
+.share-banner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	height: pxToRem(75px);
+	a {
+		display: block;
+		img {
+			height: pxToRem(75px);
+		}
+	}
+}
+
+/*开卡动画*/
+@keyframes opening {
+	0% {
+		left: pxToRem(90px);
+	}
+	25% {
+		left: pxToRem(88px);
+	}
+	50% {
+		left: pxToRem(90px);
+	}
+	75% {
+		left: pxToRem(88px);
+	}
+	100% {
+		left: pxToRem(90px);
+	}
+}
+@-moz-keyframes opening {
+	0% {
+		left: pxToRem(90px);
+	}
+	25% {
+		left: pxToRem(88px);
+	}
+	50% {
+		left: pxToRem(90px);
+	}
+	75% {
+		left: pxToRem(88px);
+	}
+	100% {
+		left: pxToRem(90px);
+	}
+}
+@-webkit-keyframes opening {
+	0% {
+		left: pxToRem(90px);
+	}
+	25% {
+		left: pxToRem(88px);
+	}
+	50% {
+		left: pxToRem(90px);
+	}
+	75% {
+		left: pxToRem(88px);
+	}
+	100% {
+		left: pxToRem(90px);
+	}
+}
+@-o-keyframes opening {
+	0% {
+		left: pxToRem(90px);
+	}
+	25% {
+		left: pxToRem(88px);
+	}
+	50% {
+		left: pxToRem(90px);
+	}
+	75% {
+		left: pxToRem(88px);
+	}
+	100% {
+		left: pxToRem(90px);
+	}
+}

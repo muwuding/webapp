@@ -1,0 +1,279 @@
+﻿//sass style
+@import "../../../common/app-common-2";
+$baseFontSize: 100px !default;
+
+@function pxToRem($px) {
+    @return $px / $baseFontSize * 1rem;
+}
+
+$yellow : #ffed21;
+$yellow-gray : #f6c91e;
+$white : #fff;
+$gray : #862206;
+
+body {
+	background-color: #fff;
+	font-size: pxToRem(14px);
+}
+.m-page {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	color: #fff;
+	background: #ea3708;
+}
+
+.text-box {
+	margin: pxToRem(10px) auto;
+	padding: pxToRem(10px);
+	width: pxToRem(290px);
+	border-radius: pxToRem(5px);
+	background: #bf310d;
+}
+
+.floor-1 {
+	background: #ea3708 url(../images/pic_1.png) no-repeat center 0;
+	background-size: 100% auto;
+	padding-top: pxToRem(198px);
+
+	.title {
+		text-align: center;
+
+		img {
+			width:pxToRem(133px);
+			height: pxToRem(27px);
+		}
+	}
+
+	section {
+		margin: pxToRem(10px) auto;
+		padding: pxToRem(10px);
+		width: pxToRem(290px);
+		border-radius: pxToRem(5px);
+		background: #bf310d;
+
+		h3 {
+			margin-bottom: pxToRem(10px);
+			font-size: pxToRem(14px);
+			font-weight: 700;
+			color: $yellow;
+		}
+
+		p {
+			margin-bottom: pxToRem(10px);
+			line-height: pxToRem(20px);
+			font-size: pxToRem(14px);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.floor-2 {
+
+	.title {
+		text-align: center;
+
+		img {
+			width:pxToRem(133px);
+			height: pxToRem(27px);
+		}
+	}
+
+	.text-box {
+
+		p {
+			text-indent: 2em;
+			line-height: 1.428;
+			margin-bottom: pxToRem(10px);
+			font-size: pxToRem(14px);
+		}
+	}
+}
+
+.floor-3 {
+	padding: pxToRem(15px);
+
+	h3 {
+		margin-bottom: pxToRem(10px);
+		font-size: pxToRem(14px);
+		font-weight: 700;
+		color: #651605;
+	}
+
+	section {
+		margin-bottom: pxToRem(30px);
+
+		p {
+			margin-bottom: pxToRem(10px);
+			line-height: pxToRem(20px);
+			font-size: pxToRem(14px);
+		}
+	}
+
+	.intruction {
+		text-align: center;
+		color: $gray;
+	}
+}
+
+//赚钱秘籍
+.fixed-icon {
+	position: fixed;
+	right: 50%;
+	bottom: pxToRem(30px);
+	z-index: 999;
+	margin-right: pxToRem(-150px);
+	width: pxToRem(50px);
+	height: pxToRem(50px);
+	text-indent: -9999em;
+  background: url(../images/adviser_icon_3.png) no-repeat 0 0;
+  background-size: pxToRem(50px) pxToRem(50px); 
+}
+
+/* 按钮 */
+.btn-box {
+	position: relative;
+	margin-top: pxToRem(20px);
+	text-align: center;
+	height: pxToRem(78px);
+
+	.btn {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: pxToRem(-122px);
+		display: block;
+		width: pxToRem(244px);
+		height: pxToRem(48px);
+		border: 2px solid #a42b0e;
+		border-radius: pxToRem(24px);
+		font-size: pxToRem(16px);
+		line-height: pxToRem(40px);
+		background: #ffee22;
+		text-align: center;
+		color: #815202;
+		-webkit-appearance: none;
+		-webkit-box-shadow: 0 -4px 0 #aea20e inset;
+		-moz-box-shadow: 0 -4px 0 #aea20e inset;
+		-o-box-shadow: 0 -4px 0 #aea20e inset;
+		box-shadow: 0 -4px 0 #aea20e inset;
+
+		&.active {
+			-webkit-box-shadow: 0 0 0 #fff;
+			-moz-box-shadow: 0 0 0 #fff;
+			-o-box-shadow: 0 0 0 #fff;
+			box-shadow: 0 0 0 #fff;
+			line-height: pxToRem(48px);
+		}
+
+		&.disabled {
+			-webkit-box-shadow: 0 0 0 #fff;
+			-moz-box-shadow: 0 0 0 #fff;
+			-o-box-shadow: 0 0 0 #fff;
+			box-shadow: 0 0 0 #fff;
+			background: none;
+			color: #ffee22;
+			border-color: #ffee22;
+			cursor: default;
+			line-height: pxToRem(48px);
+		}
+	}
+}
+
+ // 弹窗
+.dialog {
+/* 	display: none; */
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/pic_dialog_overlay.png) repeat;
+	z-index: 999;
+	overflow-y: scroll;
+	font-size: pxToRem(14px);
+
+	&.show {
+		display: block;
+	}
+	
+	//默认样式
+	.simple-wrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: pxToRem(-160px);
+		padding: pxToRem(96px) pxToRem(32px);
+		width: pxToRem(320px);
+		height: pxToRem(387px);
+		background: url(../images/adviser_bg_dialog.png) no-repeat 0 0;
+		background-size: 100% 100%;
+
+		.btn-box {
+
+			padding-top: pxToRem(10px);
+			text-align: center;
+
+			.close-dialog-btn {
+				display: inline-block;
+				width: pxToRem(240px);
+				height: pxToRem(40px);
+				border-radius: pxToRem(5px);
+				font-size: pxToRem(16px);
+				line-height: pxToRem(40px);
+				background: #fffd43;
+				text-align: center;
+				color: #91081a;
+				-webkit-appearance: none;
+				-webkit-box-shadow: 0 4px 1px #aa2e0d;
+				-moz-box-shadow: 0 4px 1px #aa2e0d;
+				-o-box-shadow: 0 4px 1px #aa2e0d;
+				box-shadow: 0 4px 1px #aa2e0d;
+
+				&.active {
+					margin-top: pxToRem(1px);
+					-webkit-box-shadow: 0 0 0 #fff;
+					-moz-box-shadow: 0 0 0 #fff;
+					-o-box-shadow: 0 0 0 #fff;
+					box-shadow: 0 0 0 #fff;
+				}
+			}
+		}
+	}
+
+	.game-intro {
+
+		h3 {
+			margin-bottom: pxToRem(2px);
+			font-size: pxToRem(14px);
+			font-weight: 400;
+			color: $yellow;
+		}
+
+		p {
+			margin-bottom: pxToRem(8px);
+			color: $white;
+			line-height: pxToRem(18px);
+
+		}
+	}
+}
+
+.pop-up-lock body {
+	overflow: hidden !important;
+}
+
+.text-yellow {
+	color: $yellow !important;
+}
+.text-white {
+	color: $white !important;
+}

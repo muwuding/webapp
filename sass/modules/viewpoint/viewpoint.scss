@@ -1,0 +1,372 @@
+﻿//sass style
+@import "../../common/app-common-1";
+$baseFontSize: 100px !default;
+
+// pixels to rems
+@function pxToRem($px) {
+    @return $px / $baseFontSize * 1rem;
+}
+/*
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+*:before, *:after {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    background:transparent;
+    font-size:100%;
+    vertical-align:baseline
+}
+body {
+    line-height:1
+}
+ol, ul {
+    list-style:none
+}
+blockquote, q {
+    quotes:none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content:"";
+    content:none
+}
+blockquote {
+    margin:20px 0 30px;
+    padding-left:20px;
+    border-left:5px solid
+}
+:focus {
+    outline:0
+}
+ins {
+    text-decoration:none
+}
+del {
+    text-decoration:line-through
+}
+table {
+    border-spacing:0;
+    border-collapse:collapse
+}
+article, aside, footer, header, hgroup, nav, section {
+    display:block
+}
+body {
+    color:#333;
+    background-color:#fff;
+    font-family:"Microsoft YaHei", "WenQuanYi Micro Hei", SimHei, tahoma, sans-serif;
+    font-size:.65rem;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:.8rem
+} */
+
+//header
+header {
+	padding-bottom: pxToRem(15px);
+	width:100%;
+  min-height: pxToRem(89px);
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+
+  .user-img {
+		position:relative;
+		margin: pxToRem(16px) 0 0 pxToRem(15px);
+		float:left;
+	  width: pxToRem(56px);
+	  height: pxToRem(56px);
+	  overflow: hidden;
+
+	  span {
+	  	display: block;
+
+	  	&.img {
+				width: pxToRem(56px);
+				height: pxToRem(56px);
+				overflow: hidden;
+				border-radius:100%;
+				border: pxToRem(3px) solid #888;
+				background:url(../../common/images/pic_user.png) no-repeat 0 0;
+				background-size:100% 100%;
+			}
+
+			&.vip {
+				position:absolute;
+				bottom: 0;
+				right: 0;
+				width: pxToRem(18px);
+				height: pxToRem(18px);
+			}
+	  }
+	}
+
+	.user-info{
+		float:left;
+		width:65%;
+		color: #666;
+
+		span {
+			margin-left: pxToRem(4px);
+		}
+
+		.user-name,
+		.user-intro {
+			margin-left:pxToRem(15px);
+		}
+
+		.user-name {
+			margin-top: pxToRem(18px);
+			font-size: pxToRem(16px);
+		}
+
+		.user-intro {
+			margin-top: pxToRem(3px);
+			font-size: pxToRem(12px);
+			line-height:pxToRem(16px);
+			color:#bbb;
+
+			img {
+				display: inline-block;
+				height:pxToRem(12px);
+				width:pxToRem(12px);
+				vertical-align:middle;
+			}
+		}
+	}
+}
+
+//按钮
+a.btn {
+	display:inline-block;
+	width:96%;
+	height:pxToRem(42px);
+	line-height:pxToRem(42px);
+	border:1px solid #ff5a00;
+	border-radius:pxToRem(2px);
+	background:#ff5a00;
+	font-size:pxToRem(16px);
+	font-weight:400;
+	color:#fff;
+	cursor:pointer;
+	text-decoration:none;
+	text-align: center;
+}
+a.btn:hover,
+a.btn:focus {
+	text-decoration:none;
+}
+
+.btn-box {
+	padding: pxToRem(10px);
+	text-align: center;
+}
+
+.post {
+    padding: pxToRem(15px);
+}
+.entry-title {
+    margin-bottom: pxToRem(15px);
+    font-weight:normal;
+    font-size: pxToRem(18px);
+    line-height: pxToRem(20px);
+    word-wrap:break-word;
+
+    &:after {
+    	visibility:hidden;
+	    display:block;
+	    font-size:0;
+	    content:" ";
+	    clear:both;
+	    height:0
+    }
+
+    .choice-icon {
+	    float:left;
+	    margin-top: pxToRem(2px);
+	    margin-right: pxToRem(4px);
+	    width: pxToRem(16px);
+	    height: pxToRem(16px);
+	    line-height: pxToRem(16px);
+	    color:#fff;
+	    background-color:#ff5a00;
+	    font-size: pxToRem(14px);
+	    text-align:center;
+	    border-radius: pxToRem(2px);
+		}
+}
+.post-meta {
+    margin-bottom: pxToRem(6px);
+    color:#999;
+    font-size: pxToRem(12px);
+
+    &:after {
+    	visibility:hidden;
+	    display:block;
+	    font-size:0;
+	    content:" ";
+	    clear:both;
+	    height:0;
+    }
+
+    span {
+	    float:left
+		}
+
+		.reading-quantity {
+		   float:right
+		}
+
+		.reading-quantity i {
+		  font-style:normal;
+		  color:#666
+		}
+}
+
+.entry-content {
+    line-height: pxToRem(22px);
+    font-size: pxToRem(14px);
+    word-wrap:break-word;
+
+    img {
+    	margin: pxToRem(8px) 0;
+	    display:block;
+	    max-width:100% !important;
+    }
+}
+
+.view-footer {
+	padding-bottom: pxToRem(20px);
+	border-top: 1px solid #ddd;
+	background: #f5f5f5;
+
+	.footer-text {
+		padding: pxToRem(10px) pxToRem(15px) 0;
+		font-size: pxToRem(12px);
+		line-height: pxToRem(14px);
+		text-align: center;
+		color: #999;
+	}
+
+  .footer-user {
+    padding: pxToRem(10px) 0;
+    font-size: pxToRem(12px);
+    text-align: center;
+
+    a {
+      margin: 0 pxToRem(5px);
+    }
+  }
+}
+
+//底部下载层
+.download-wrap {
+	position:fixed;
+	top:0;
+	z-index:999;
+	padding:9px 0;
+	width:100%;
+	max-width:640px;
+	height: pxToRem(60px);
+	background:#111;
+	opacity:0.9;
+	-webkit-opacity:0.9;
+
+	.download {
+		padding:0 pxToRem(10px);
+	}
+
+	.logo{
+		float:left;
+		width: pxToRem(42px);
+		height:pxToRem(42px);
+		overflow:hidden;
+	}
+
+	.app-info {
+		float:left;
+		margin-left: pxToRem(10px);
+
+		h1 {
+			font-size: pxToRem(16px);
+			font-weight:400;
+			color:#fff;
+			line-height: pxToRem(24px);
+		}
+
+		h4 {
+			line-height: pxToRem(18px);
+			font-size: pxToRem(12px);
+			font-weight:400;
+			color:#999;
+		}
+	}
+
+	.download-btn {
+		float:right;
+		margin-top: pxToRem(5px);
+
+		a{
+			display:block;
+			width: pxToRem(90px);
+			height: pxToRem(33px);
+			line-height: pxToRem(33px);
+			background:#ff5a00;
+			font-size: pxToRem(14px);
+			color:#fff;
+			text-decoration:none;
+			text-align:center;
+			border-radius: pxToRem(2px);
+		}
+	}
+}
+
+//遮罩层
+.master {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:999;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.7;
+}
+
+.master .prompt {
+	position:absolute;
+	top: pxToRem(4px);
+	right: pxToRem(8px);
+	width: pxToRem(238px);
+}
+
+.master .prompt img {
+	width:100%;
+}
+
+.has-downloadwrap {
+	padding-top: pxToRem(60px);
+}
+
+.load-fail-img {
+  width:pxToRem(90px);
+  height: pxToRem(90px);
+  margin: pxToRem(100px) auto pxToRem(30px);
+  text-align:center;
+}
+
+.load-fail-text {
+  font-size: pxToRem(14px);
+  text-align:center;
+  line-height: pxToRem(22px);
+  color:#333;
+}

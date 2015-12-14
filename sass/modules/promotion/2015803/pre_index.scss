@@ -1,0 +1,108 @@
+﻿//sass style
+@import "../../../common/app-common-1";
+$baseFontSize: 100px !default;
+
+// pixels to rems
+@function pxToRem($px) {
+    @return $px / $baseFontSize * 1rem;
+}
+
+body {
+	color: #ffe175;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+a {
+	color: #333;
+	&:active {
+		color: #999;
+	}
+}
+img {
+	display: block;
+}
+
+.page {
+	box-sizing: content-box;
+	background-color: #07182a;
+	color:#f4ddb4;
+	min-width: pxToRem(320px);
+}
+.banner {
+	width: 100%;
+}
+.content {
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/pre_line.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% auto;
+}
+.explain {
+	padding: pxToRem(10px) pxToRem(10px) pxToRem(4px);
+	p{
+		position: relative;
+		margin-bottom: pxToRem(6px);
+		padding-left: pxToRem(18px);
+		font-size: pxToRem(12px);
+		line-height: pxToRem(18px);
+		em {
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			width: pxToRem(18px);
+			height: pxToRem(14px);
+			font-style: normal;
+		}
+		a {
+			color: #f65d4f;
+		}
+	}
+}
+
+.prize {
+	margin: pxToRem(10px) pxToRem(10px);
+	h3 {
+		padding: 0 0 pxToRem(10px);
+		font-size: pxToRem(20px);
+		text-align: center;
+	}
+	ul li {
+		float: left;
+		width: 33.33333%;
+		text-align: center;
+	}
+}
+
+.course {
+	margin: pxToRem(20px) pxToRem(10px) 0;
+	dt {
+		padding: pxToRem(4px) 0 pxToRem(15px);
+		font-size: pxToRem(20px);
+		text-align: center;
+	}
+	dd li {
+		float: left;
+		margin-bottom: pxToRem(20px);
+		width: 50%;
+		p {
+			padding-left: pxToRem(12px); 
+			line-height: pxToRem(18px);
+			color:#f4ddb4;
+			font-size: pxToRem(12px);
+		}
+		.img {
+			margin: pxToRem(5px) auto;
+			width:pxToRem(105px);
+			height:pxToRem(114px);
+		}
+	}
+}
+

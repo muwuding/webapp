@@ -1,0 +1,582 @@
+﻿//sass style
+@import "../../common/app-common-1";
+$baseFontSize: 100px !default;
+
+// pixels to rems
+@function pxToRem($px) {
+    @return $px / $baseFontSize * 1rem;
+}
+
+//部分颜色配置
+$text-white: #fff;
+$text-light: #bbb;
+$text-gray: #666;
+$text-back: #333;
+
+$text-orange: #ff5a00;
+$text-red: #fe0002;
+$text-green: #009900;
+
+$header-bg: #444;
+
+html {
+	min-height:100%;
+}
+body {
+	background-color: #eee;
+	min-height: 100%;
+}
+.page {
+	margin:0 auto;
+	padding: pxToRem(60px) 0 pxToRem(20px);
+	width: 100%;
+	max-width:640px;
+	min-width:320px;
+	height:100%;
+	font-size: pxToRem(14px);
+}
+
+//header
+header {
+	padding-bottom: pxToRem(15px);
+	width:100%;
+  min-height: pxToRem(112px);
+  background-color: $header-bg;
+  text-shadow: 0 1px 1px #78350c;
+
+  .user-img {
+		position:relative;
+		margin: pxToRem(16px) 0 0 pxToRem(15px);
+		float:left;
+	  width: pxToRem(80px);
+	  height: pxToRem(80px);
+	  overflow: hidden;
+
+	  span {
+	  	display: block;
+
+	  	&.img {
+				width: pxToRem(80px);
+				height: pxToRem(80px);
+				overflow: hidden;
+				border-radius:100%;
+				border: pxToRem(3px) solid #888;
+				background:url(../../common/images/pic_user.png) no-repeat 0 0;
+				background-size:100% 100%;
+			}
+
+			&.vip {
+				position:absolute;
+				bottom: 0;
+				right: 0;
+				width: pxToRem(18px);
+				height: pxToRem(18px);
+			}
+	  }
+	}
+
+	.ptf-info{
+		float:left;
+		width:65%;
+		color: $text-white;
+
+		span {
+			margin-left: pxToRem(4px);
+		}
+
+		.ptf-title,
+		.user-name,
+		.user-intro {
+			margin-left:pxToRem(15px);
+		}
+
+		.ptf-title {
+			margin-top: pxToRem(16px);
+			font-size: pxToRem(18px);
+		}
+
+		.user-name {
+			margin-top: pxToRem(3px);
+			font-size: pxToRem(14px);
+		}
+
+		.user-intro {
+			margin-top: pxToRem(3px);
+			font-size: pxToRem(12px);
+			line-height:pxToRem(16px);
+			color:#bbb;
+
+			img {
+				display: inline-block;
+				height:pxToRem(12px);
+				width:pxToRem(12px);
+				vertical-align:middle;
+			}
+		}
+	}
+
+	/* .vip-intro {
+		position:relative;
+		margin-top: pxToRem(10px);
+		padding: 0 pxToRem(30px) 0 pxToRem(15px);
+		color: $text-light;
+		font-size:pxToRem(14px);
+		height:pxToRem(18px);
+		overflow:hidden;
+
+		p {
+			line-height:pxToRem(18px);
+
+			em {
+				display:inline-block;
+				width:pxToRem(15px);
+				height:pxToRem(12px);
+			}
+		}
+
+		span {
+			display:none;
+			position:absolute;
+			bottom:pxToRem(8px);
+			right: pxToRem(15px);
+			width:pxToRem(15px);
+			height:pxToRem(9px);
+		}
+	} */
+}
+
+//指数
+.yields-wrap {
+	padding: pxToRem(10px);
+	padding-bottom: 0;
+	background: #fff;
+}
+
+.gain-title {
+	height:pxToRem(18px);
+	line-height:pxToRem(18px);
+  font-size: pxToRem(14px);
+  font-weight:400;
+  color: #666;
+}
+
+.gain-box {
+	padding:pxToRem(8px) 0 pxToRem(12px);
+	border-bottom:1px solid #eee;
+}
+
+.gain-index {
+	float:left;
+
+	.index {
+		display:inline-block;
+		height:pxToRem(36px);
+		line-height:pxToRem(36px);
+		font-size:pxToRem(36px);
+		font-weight:400;
+	}
+
+	.icon {
+		display:inline-block;
+		height:pxToRem(15px);
+		font-size:pxToRem(12px);
+		line-height:pxToRem(15px);
+		text-align:center;
+		color:#fff;
+		background:#24a9fe;
+		border-radius:pxToRem(2px);
+		vertical-align:middle;
+
+		&.icon1 {
+			width:pxToRem(30px);
+			background:#ff5a00;
+		}
+
+		&.icon2 {
+			width:pxToRem(42px);
+			background:#24a9fe;
+		}
+	}
+}
+
+//收益数据
+.yields-box {
+	padding:pxToRem(10px) 0 0;
+
+	table {
+		width: 100%;
+	}
+
+	td {
+		width:25%;
+		text-align: center;
+	}
+
+	h3 {
+		line-height:pxToRem(30px);
+		font-size:pxToRem(12px);
+		font-weight:400;
+		color:#666;
+		text-align:center;
+	}
+
+	span {
+		display: inline-block;
+		line-height:pxToRem(18px);
+		text-align:center;
+		font-size:pxToRem(14px);
+		vertical-align:middle;
+	}
+
+	.index-img {
+		display: inline-block;
+		padding-left:pxToRem(2px);
+	  width: pxToRem(62px);
+	  height: pxToRem(18px);
+
+	  img {
+			margin: 0 pxToRem(2px);
+		  padding: 0 auto;
+		  width: pxToRem(32px);
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: bottom;
+		  font-size: pxToRem(10px) !important;
+		  color:#999;
+		}
+	}
+	.toggle-box {
+		width: 100%;
+		height: pxToRem(20px);
+		background: url(../images/icon_down.png) no-repeat center 60%;
+		background-size: pxToRem(15px) pxToRem(9px);
+
+		&.up {
+			background-image: url(../images/icon_up.png);
+		}
+	}
+}
+
+//按钮
+a.btn {
+	display:inline-block;
+	width:96%;
+	height:pxToRem(42px);
+	line-height:pxToRem(42px);
+	border:1px solid #ff5a00;
+	border-radius:pxToRem(2px);
+	background:#ff5a00;
+	font-size:pxToRem(16px);
+	font-weight:400;
+	color:#fff;
+	cursor:pointer;
+	text-decoration:none;
+	text-align: center;
+}
+a.btn:hover,
+a.btn:focus {
+	text-decoration:none;
+}
+
+.btn-box {
+	padding: pxToRem(10px);
+	text-align: center;
+}
+
+//字体类
+.text-red {
+	color: $text-red;
+}
+
+.text-green {
+	color: $text-green;
+}
+
+//图标类
+.icon-locked {
+	margin: 0 pxToRem(4px);
+	display: inline-block;
+	width: pxToRem(13px);
+	height: pxToRem(15px);
+	background: url(../images/icon_locked.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	vertical-align: sub;
+}
+
+.icon-buy,
+.icon-sell {
+	display: inline-block;
+	width: pxToRem(14px);
+	height: pxToRem(14px);
+	line-height: pxToRem(14px);
+	text-align: center;
+	font-size: pxToRem(12px);
+	color: #fff;
+	font-style: normal;
+	border-radius: pxToRem(2px);
+}
+
+.icon-buy {
+	background: $text-red;
+}
+
+.icon-sell {
+	background: $text-green;
+}
+
+.icon-arrows-down {
+	display: inline-block;
+	width: pxToRem(7px);
+	height: pxToRem(9px);
+	background: url(../images/icon_arrows_down.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+//股票行业配置,历史走势
+.business-chart-wrap,.history-chart-wrap  {
+	margin-top: pxToRem(10px);
+	background: #fff;
+
+	h2 {
+		padding-left: pxToRem(10px);
+		height: pxToRem(44px);
+		line-height: pxToRem(44px);
+		text-align:left;
+		font-size: pxToRem(16px);
+		font-weight:400;
+		color:#666;
+		border-bottom: 1px solid #eaebed;
+	}
+
+	.locked-box {
+		padding-left: pxToRem(10px);
+		height: pxToRem(25px);
+		line-height: pxToRem(25px);
+		font-size: pxToRem(12px);
+		background: #f1f2f4;
+		color: #666;
+	}
+
+	.echart-pie {
+		width: 100%;
+		height: pxToRem(122px);
+	}
+
+	.echart-line {
+		width: 100%;
+		height: pxToRem(176px);
+	}
+}
+
+//最新调仓
+.last-adjust-wrap {
+	margin-top: pxToRem(10px);
+	background: #fff;
+
+	h2 {
+		padding-left: pxToRem(10px);
+		height: pxToRem(44px);
+		line-height: pxToRem(44px);
+		text-align:left;
+		font-size: pxToRem(16px);
+		font-weight:400;
+		color:#666;
+		border-bottom: 1px solid #eaebed;
+	}
+
+	.locked-box {
+		padding-left: pxToRem(10px);
+		height: pxToRem(25px);
+		line-height: pxToRem(25px);
+		font-size: pxToRem(12px);
+		background: #f1f2f4;
+		color: #666;
+	}
+
+	.adjust-commit {
+		padding-left: pxToRem(10px);
+		height: pxToRem(36px);
+		line-height: pxToRem(36px);
+		color: #999;
+		border-bottom: 1px solid #e3e3e3;
+		font-size: pxToRem(12px);
+
+		span {
+			display: block;
+			line-height: 1;
+
+			&.text {
+				display: inline-block;
+				line-height: pxToRem(14px);
+				vertical-align: sub;
+			}
+		}
+	}
+
+	.adjust-detail {
+		width: 100%;
+
+		th {
+			width: 25%;
+			height: pxToRem(44px);
+			vertical-align: middle;
+			text-align: center;
+			color: #666;
+			font-size: pxToRem(12px);
+			font-weight: 400;
+
+			span {
+				display: block;
+				line-height: 1.1;
+
+				&.small {
+					font-size: pxToRem(10px);
+				}
+			}
+		}
+
+		tbody {
+
+			tr {
+				border-top: 1px solid #ececec;
+			}
+
+			td {
+				padding: pxToRem(15px) pxToRem(10px);
+				text-align: center;
+			}
+
+			span {
+				display: block;
+				line-height: 1;
+
+				&.text {
+					display: inline-block;
+					line-height: pxToRem(14px);
+					vertical-align: sub;
+				}
+			}
+		}
+	}
+}
+
+//底部下载层
+.download-wrap {
+	position:fixed;
+	top:0;
+	z-index:999;
+	padding:9px 0;
+	width:100%;
+	max-width:640px;
+	height: pxToRem(60px);
+	background:#111;
+	opacity:0.9;
+	-webkit-opacity:0.9;
+
+	.download {
+		padding:0 pxToRem(10px);
+	}
+
+	.logo{
+		float:left;
+		width: pxToRem(42px);
+		height:pxToRem(42px);
+		overflow:hidden;
+	}
+
+	.app-info {
+		float:left;
+		margin-left: pxToRem(10px);
+
+		h1 {
+			font-size: pxToRem(16px);
+			font-weight:400;
+			color:#fff;
+			line-height: pxToRem(24px);
+		}
+
+		h4 {
+			line-height: pxToRem(18px);
+			font-size: pxToRem(12px);
+			font-weight:400;
+			color:#999;
+		}
+	}
+
+	.download-btn {
+		float:right;
+		margin-top: pxToRem(5px);
+
+		a{
+			display:block;
+			width: pxToRem(90px);
+			height: pxToRem(33px);
+			line-height: pxToRem(33px);
+			background:#ff5a00;
+			font-size: pxToRem(14px);
+			color:#fff;
+			text-decoration:none;
+			text-align:center;
+			border-radius: pxToRem(2px);
+		}
+	}
+}
+
+//遮罩层
+.master {
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:999;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.7;
+}
+
+.master .prompt {
+	position:absolute;
+	top: pxToRem(4px);
+	right: pxToRem(8px);
+	width: pxToRem(238px);
+}
+
+.master .prompt img {
+	width:100%;
+}
+
+//发生异常
+.fail-img {
+	margin:50% auto 0;
+	text-align:center;
+	vertaical-align:middle;
+}
+.fail-img img {
+	width: pxToRem(90px);
+	height:pxToRem(90px);
+}
+
+//用于隐藏logo，微信分享
+.logo-hidden {
+	width:0;
+	height:0;
+	overflow:hidden;
+}
+
+//错误页
+.load-fail-img {
+  width:pxToRem(90px);
+  height: pxToRem(90px);
+  margin: pxToRem(100px) auto pxToRem(30px);
+  text-align:center;
+}
+
+.load-fail-text {
+  font-size: pxToRem(14px);
+  text-align:center;
+  line-height: pxToRem(22px);
+  color:#333;
+}

@@ -1,0 +1,163 @@
+﻿//sass style
+@import "../../common/app-common-2";
+$baseFontSize: 100px !default;
+
+//颜色变量
+$back : #333;
+$gray : #666;
+$light : #999;
+
+// pixels to rems
+@function pxToRem($px) {
+    @return $px / $baseFontSize * 1rem;
+}
+html {
+	min-height:100%;
+}
+body {
+	background-color: #f7f7f7;
+	min-height: 100%;
+	font-size: pxToRem(16px);
+}
+
+//主框架
+.page {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	min-height: 100%;
+	max-width: 640px;
+	background-color: #fff;
+}
+section {
+	padding: pxToRem(20px) pxToRem(10px) pxToRem(50px);
+}
+.title {
+	padding: 0;
+	text-align: left;
+	font-size: pxToRem(18px);
+	font-weight: 700;
+	color: $back;
+}
+.meta {
+	padding: pxToRem(10px) 0;
+	font-size: pxToRem(12px);
+	color: $light;
+	border-bottom: 1px solid #ddd;
+
+	span {
+		margin-right: pxToRem(5px);
+	}
+}
+.article {
+	padding: pxToRem(15px) 0 pxToRem(30px);
+	font-size: pxToRem(16px);
+	line-height: pxToRem(24px);
+	color: $back;
+
+	p {
+		margin-bottom: 1em;
+	}
+}
+
+a.link {
+	padding: pxToRem(15px) pxToRem(10px) pxToRem(30px);
+	
+	.img {
+		margin: pxToRem(10px) auto;
+		width: 46px;
+		height: 46px;
+	}
+
+	span {
+		display: block;
+		text-align: center;
+		color: $back;
+	}
+}
+
+
+/*底部下载层*/
+.download-wrap {
+	position:fixed;
+	bottom:0;
+	z-index:999;
+	padding:pxToRem(9px) 0;
+	width:100%;
+	max-width: 640px;
+	height:pxToRem(60px);
+	background:#111;
+	opacity:0.9;
+	-webkit-opacity:0.9;
+}
+.download {
+	padding:0 pxToRem(10px);
+
+	.logo {
+		float:left;
+		width:pxToRem(42px);
+		height:pxToRem(42px);
+		overflow:hidden;
+	}
+
+	.app-info {
+		float:left;
+		margin-left:pxToRem(10px);
+
+		h1 {
+			font-size: pxToRem(16px);
+			font-weight:400;
+			color:#fff;
+			line-height:pxToRem(24px);
+		}
+
+		h4 {
+			font-size:pxToRem(12px);
+			font-weight:400;
+			color:$light;
+			line-height:pxToRem(18px);
+		}
+	}
+
+	.download-btn {
+			float:right;
+			margin-top:pxToRem(5px);
+
+		a {
+			display:block;
+			width:pxToRem(90px);
+			height:pxToRem(33px);
+			line-height:pxToRem(33px);
+			background:#ff5a00;
+			font-size:pxToRem(14px);
+			color:#fff;
+			text-decoration:none;
+			text-align:center;
+			border-radius:2px;
+		}
+	}
+}
+.hidden-img {
+	display: none;
+}
+.ajax-fail {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: pxToRem(-100px);
+	width: pxToRem(200px);
+	font-size: pxToRem(14px);
+	color: $back;
+	text-align: center;
+	img {
+		display: inline-block;
+		margin-right: pxToRem(5px);
+		width: pxToRem(14px);
+		height: pxToRem(14px);
+		vertical-align: middle;
+	}
+}
+
+
+
+
