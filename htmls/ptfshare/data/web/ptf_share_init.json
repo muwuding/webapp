@@ -1,0 +1,151 @@
+﻿{
+"code": 0,
+"message": null,
+"updateMsg": null,
+"id": null,
+"result": {
+  "name": "专业组合30年",
+  "ptfId": 2410144787238391000,
+  "tdYield": -0.2,
+  "tYield": 0.22999999999999998,
+  "desc": "",
+  "volatility": 2,
+  "uId": 3045888298811025400,
+  "uName": "b牛牛b",
+  "uSig": "一起牛！！",
+  "uImg": "http://192.168.1.180:8000/user/2015/12/14/f75803f38135441e9a24419f7f2ba874__640x640_96x96.jpg",
+  "ptfIdx": 1002,
+  "createTime": 1447641187000,
+  "isReal": "0",
+  "pe": 17.84,
+  "stkCate": [
+    {
+    "cateName": "电子",
+    "wgt": 0.058,
+    "stksCnt": null,
+    "stks": [{
+        "assetId": "000049.SZ",
+        "stkName": "德赛电池",
+        "weight": 0.058,
+        "price": "58.55",
+        "changePct": -0.0445,
+        "status": 0,
+        "hldPrc": "53.01",
+        "hldYld": 0.1046,
+        "stkType": "0"
+        }]
+    },
+    {
+    "cateName": "家用电器",
+    "wgt": 0.029,
+    "stksCnt": null,
+    "stks": [{
+        "assetId": "000333.SZ",
+        "stkName": "美的集团",
+        "weight": 0.029,
+        "price": "29.70",
+        "changePct": 0.0109,
+        "status": 0,
+        "hldPrc": "28.71",
+        "hldYld": 0.0347,
+        "stkType": "0"
+        }]
+    },
+    {
+    "cateName": "通信",
+    "wgt": 0.017,
+    "stksCnt": null,
+    "stks": [{
+      "assetId": "000063.SZ",
+      "stkName": "中兴通讯",
+      "weight": 0.017,
+      "price": "17.76",
+      "changePct": 0.0045,
+      "status": 0,
+      "hldPrc": "18.89",
+      "hldYld": -0.0596,
+      "stkType": "0"
+      }]
+    },
+    {
+    "cateName": "房地产",
+    "wgt": 0.016,
+    "stksCnt": null,
+    "stks": [{
+      "assetId": "000031.SZ",
+      "stkName": "中粮地产",
+      "weight": 0.016,
+      "price": "13.82",
+      "changePct": 0.0237,
+      "status": 0,
+      "hldPrc": "15.97",
+      "hldYld": -0.1347,
+      "stkType": "0"
+      }]
+    },
+    {
+    "cateName": "银行",
+    "wgt": 0.0159999999999999,
+    "stksCnt": null,
+    "stks": [{
+        "assetId": "000001.SZ",
+        "stkName": "平安银行",
+        "weight": 0.0159999999999999,
+        "price": "11.85",
+        "changePct": 0.0017,
+        "status": 0,
+        "hldPrc": "12.31",
+        "hldYld": -0.037,
+        "stkType": "0"
+        }]
+    },
+    {
+    "cateName": "其他",
+    "wgt": 0,
+    "stksCnt": null,
+    "stks": [{
+        "assetId": "161226.SZ",
+        "stkName": "白银基金",
+        "weight": 0,
+        "price": "0.917",
+        "changePct": 0,
+        "status": 0,
+        "hldPrc": "0.944",
+        "hldYld": -0.0286,
+        "stkType": "9"
+        }]
+    },
+    {
+    "cateName": "现金",
+    "wgt": 0.864,
+    "stksCnt": null,
+    "stks": [{
+        "assetId": "RMB.CHN",
+        "stkName": "人民币",
+        "weight": 0.864,
+        "price": null,
+        "changePct": null,
+        "status": 0,
+        "hldPrc": "1.00",
+        "hldYld": 0,
+        "stkType": "101"
+      }]
+    }],
+    "uType": 2,
+    "gender": 1,
+    "orgName": "安徽大时代",
+    "orgDesc": "其实在每个人的心里都有一片荒凉的戈壁，而我们费尽一生所要做的，就是让那片戈壁上开满鲜花，在各种各样的花中，有一朵花，它的名字叫诚信， 有这么一个小人物，小得就像大海里的一滴水，沙漠里的一粒沙，这个人是我家小区门口的一位修车老头，每天上学、放学我都会路过他的修车摊三四回，我却从来没有注意过他，只是偶尔从大人的口中知道他是个哑巴，但后来的一件事却让他深深地印在了我的记忆中。这件事发生在我十岁那年的冬天",
+    "stkWgt": 0.136,
+    "ptfWinRate": 0.3333,
+    "favCnt": 1,
+    "ptfMaxRetrace": 0,
+    "mYield": null,
+    "yYield": null,
+    "rebalance": {
+    "busCon": "{\"content\":\"******\",\"stks\":[{\"assetId\":\"******\",\"cfmPrc\":\"******\",\"name\":\"******\",\"src\":0.016,\"tar\":0.017,\"type\":\"B\",\"changePct\":-0.0637
+    }]
+    }",
+    "ts": 1449455006000
+    }
+  }
+}

@@ -1,0 +1,24 @@
+﻿{
+"code": 0,
+"result": {
+  "nickname":"覃久久",
+  "userId":"200015222541125",
+  "userIcon":"../../static/common/images/demo_user.jpg",
+  "uType":1,
+  "gender":1,
+  "ptfCnt":8,
+  "maxPer":"+8.68%",
+  "sig":"我就是我，不一样的烟火",
+  "datas": [
+    {
+      "adImg": "../../../static/promotion/20151026/images/banner_150.png",
+      "adUrl": "../../../htmls/promotion/20151026/index.html?adId=11",
+      "adId": 2
+    },
+    {
+      "adImg": "../../../static/promotion/20151130/images/banner_150.png",
+      "adUrl": "../../../htmls/promotion/20151130/index.html?adId=12",
+      "adId": 5
+    }]
+  }
+}

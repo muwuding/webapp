@@ -1,0 +1,26 @@
+﻿{
+"code": 0,
+"result": {
+  "nickname":"王小刚大投顾",
+  "userId":"200015222541125",
+  "userIcon":"../../static/common/images/demo_user.jpg",
+  "uType":2,
+  "gender":0,
+  "orgName":"中信证券",
+  "orgDesc":"中信国家机构证券有限公司",
+  "adviserType":2,
+  "adviserName":"投资顾问",
+  "customerInfo":"互联网 中国重工 有色金属",
+  "investAbility": {
+    "wYield" : "+12.87%",
+    "mYield" : "+35.88%",
+    "yYield" : "+198.98%",
+    "selWinRate" : "66%",
+    "selPolicy" : "精准",
+    "hldDay" : "4天",
+    "hldPolicy" : "中短线",
+    "retracement" : "3%",
+    "retracePolicy" : "稳健"
+  }
+}
+}

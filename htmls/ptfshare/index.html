@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="zh_CN" ng-app="myApp" ng-controller="ptfShareCtrl">
+<head>
+<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <meta name="renderer" content="webkit"/>
+  <link type="text/css" rel="stylesheet" href="../../static/ptfshare/css/index.css?v=20151204"/>
+  <title ng-bind="pageTitle"></title>
+</head>
+<body>
+  <div class="page" id="main" style="display:none;">
+    <!-- header -->
+    <header>
+      <div class="clearfix">
+        <div class="user-img">
+          <span class="img">
+            <img src="{{uImg}}"/>
+          </span>
+          <span class="vip" ng-bind-html="hasIconVip"></span>
+        </div>
+        <div class="ptf-info">
+          <p class="ptf-title">{{ptfname}}</p>
+          <p class="user-name">管理人:<span>{{uName}}</span></p>
+          <p class="user-intro">
+            投资顾问（{{orgName}}）<br>
+            投资风格：短线投资 基本面分析
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- 指数栏 -->
+    <div class="yields-wrap">
+
+      <h1 class="gain-title">累计收益</h1>
+      <div class="gain-box clearfix">
+        <div class="gain-index">
+          <span class="index {{tYieldColor}}">{{tYield}}</span>
+          <span class="icon {{isRealClass}}">{{isReal}}</span>
+        </div>
+      </div>
+
+      <!-- 收益数据 -->
+      <div class="yields-box" id="yieldsBox">
+        <div>
+        <table>
+          <tr>
+            <td>
+              <h3>日涨跌</h3>
+              <span class="{{tdYieldColor}}">{{tdYield}}</span>
+            </td>
+            <td>
+              <h3>股票仓位</h3>
+              <span>{{stkWgt}}</span>
+            </td>
+            <td>
+              <h3>胜率</h3>
+              <span>{{ptfWinRate}}</span>
+            </td>
+            <td>
+              <h3>关注人</h3>
+              <span>{{favCnt}}</span>
+            </td>
+          </tr>
+          </table>
+          </div>
+          <div id="yieldsTrTwo" style="display:none;">
+            <table>
+              <tr>
+                <td>
+                  <h3>月收益率</h3>
+                  <span class="{{mYieldColor}}">{{mYield}}</span>
+                </td>
+                <td>
+                  <h3>年收益率</h3>
+                  <span class="{{yYieldColor}}">{{yYield}}</span>
+                </td>
+                <td>
+                  <h3>最大回撤</h3>
+                  <span class="{{ptfMaxRetraceColor}}">{{ptfMaxRetrace}}</span>
+                </td>
+                <td>
+                  <h3>波动率</h3>
+                  <div class="index-img">
+                    <span>低</span><img id="qn-fluctuation_ratio_img_id" src="{{volatility}}" /><span>高</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        <div id="toggleBox" class="toggle-box down"></div>
+      </div>
+    </div>
+
+    <!-- 走势图表 -->
+    <div class="history-chart-wrap">
+      <h2>历史走势</h2>
+      <div class="echart-line" id="chartLine">{{busCon}}</div>
+      <div class="echart-text" id="textLine"></div>
+    </div>
+
+    <!-- 最新调仓 -->
+    <div class="last-adjust-wrap">
+      <h2>最新调仓<span>{{adjustTs}}</span></h2>
+      <div class="locked-box">
+        <i class="icon-locked"></i>调仓记录详情，需在一起牛加我为{{dCustom}}才能看到哦。
+      </div>
+      <div class="adjust-commit">
+        调仓理由：<span class="text">{{adjustCommit}}</span>
+      </div>
+      <table class="adjust-detail">
+        <thead>
+          <tr>
+            <th>股票名</th>
+            <th>成交价</th>
+            <th>比例变动</th>
+            <th>
+              <span>涨跌幅</span>
+              <span class="small">调仓后至今</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <i class="icon-buy">买</i>
+              <span class="text">******</span>
+            </td>
+            <td><span class="text">******</span></td>
+            <td>
+              <span>100%</span>
+              <span><i class="icon-arrows-down"></i></span>
+              <span>8%</span>
+            </td>
+            <td class="text-red">
+              +140.00%
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i class="icon-sell">买</i>
+              <span class="text">******</span>
+            </td>
+            <td><span class="text">******</span></td>
+            <td>
+              <span>100%</span>
+              <span><i class="icon-arrows-down"></i></span>
+              <span>8%</span>
+            </td>
+            <td>
+              +140.00%
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 行业配置 -->
+    <div class="business-chart-wrap">
+      <h2>股票行业配置</h2>
+      <div class="locked-box">
+        <i class="icon-locked"></i>股票配置详情，需在一起牛加我为{{dCustom}}才能看到哦
+      </div>
+      <div class="echart-pie" id="chartPie"></div>
+      <div class="echart-pie-text" id="textPie"></div>
+    </div>
+
+    <!-- 加好友 -->
+    <div class="btn-box center">
+      <a href="../register/card.html?userId=2000500001586" class="btn">加TA为{{dCustom}}</a>
+    </div>
+
+    <!-- app下载 -->
+    <div class="download-wrap">
+      <div class="download clearfix">
+        <div class="logo"><img src="../../static/common/images/logo120.png"/></div>
+        <div class="app-info">
+          <h1>一起牛</h1>
+          <h4>让你站在牛人的肩膀上</h4>
+        </div>
+        <div class="download-btn"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.yiqiniu.android.yiqiniu" onclick="_hmt.push(['_trackEvent', 'download_share', 'click', 'download_share'])">免费下载</a></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../static/common/js/libs/jquery-1.11.2.min.js?v=20151204"></script>
+  <script src="../../static/common/js/libs/echarts/echarts.js"></script>
+  <script src="../../static/common/js/libs/angular.min.js"></script>
+  <script src="../../static/common/js/common.jquery.1.0.js?ver=20151209"></script>
+  <!--<script src="../../static/ptfshare/js/echart.js?v=20151204"></script>-->
+  <script src="../../static/ptfshare/js/index.js?v=20151204"></script>
+  <script>
+  var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?c645c07cf23951ce84f60a562a36db9e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</body>
+</html>

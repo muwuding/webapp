@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-rim-auto-match" content="none">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link href="../../static/register/css/register.css?ver=20151209" type="text/css" rel="stylesheet">
+	<title>一起牛</title>
+</head>
+<body>
+	<div class="page" id="main" style="display:none;">
+		<div class="valid-wrap">
+			<div class="valid-text">Hi~&nbsp;我是<span id="userName"></span>，我正在一起牛做投资，快加我好友一起玩吧！只有第一次需要验证哦！</div>
+			<div class="form-wrap">
+				<div class="form-box">
+					<input id="phoneNum" class="form-text" type="text" placeholder="手机号码" value=""/>
+				</div>
+				<div class="form-box get-captcha clearfix">
+					<input id="captcha" class="form-text" type="text" placeholder="验证码" value=""/>
+					<button class="btn" id="captchaBtn">获取验证码</button>
+				</div>
+				<div class="form-error" id="error"></div>
+			</div>
+			<div class="btn-box">
+				<button id="submitBtn" class="btn">下一步</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../static/common/js/libs/jquery-1.11.2.min.js"></script>
+	<script src="../../static/common/js/libs/jquery.cookie.js"></script>
+	<script src="../../static/common/js/common.jquery.1.0.js?ver=20151209"></script>
+	<script src="../../static/register/js/valid.js?ver=20151209"></script>
+</body>
+</html>
